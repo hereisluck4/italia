@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITALIA CAFFE</title>
+    <link rel="icon" href="images/caffe and ice cream.png" type="image/x-icon">
+    <style>
+        /* Loading spinner styles */
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999; /* Ensure it's on top of everything */
+            display: none; /* Initially hidden */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        body.loading .loader {
+            display: block; /* Display loader when body has loading class */
+        }
+
+        /* Rest of your CSS styles */
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background-color:  #FBD4B4;            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: #002060;
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 1s forwards; /* Fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: -50px;
+            text-align: center;
+            align-items: center;
+            animation: slideInDown 1s forwards; /* Slide-in animation */
+        }
+        
+
+        p{
+            font-size: 24px;
+            margin-top: -50px;
+            font-weight: bolder;
+            text-align: center;
+            align-items: center;
+            animation: slideInDown 1s forwards; /* Slide-in animation */
+
+        }
+        @keyframes slideInDown {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+
+        .logo {
+            width: 250px;
+            height: 250px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            animation: zoomIn 1s forwards; /* Zoom-in animation */
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        .language-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            animation: fadeInUp 1s forwards; /* Fade-in-up animation */
+        }
+
+        @keyframes fadeInUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .language-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Green */
+            color: #002060;
+            font-weight: bolder;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .language-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        .social-media-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            animation: fadeInDown 1s forwards; /* Fade-in-down animation */
+        }
+
+        @keyframes fadeInDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .social-media-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: rotate 2s linear infinite; /* Rotate animation */
+        }
+
+        .social-media-icon:hover {
+            background-color: #555;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        footer {
+            color: #002060;
+            padding: 10px;
+            width: 100%;
+          
+            text-align: center;
+            /* Position at the bottom */
+            bottom: 0; /* Stick to the bottom */
+         /* Align to the left */
+        }
+    </style>
+</head>
+<body class="loading"> <!-- Add loading class to body -->
+    <div class="loader"></div> <!-- Loader element -->
+    <img class="logo" src="images/caffe and ice cream.png" alt="Restaurant Logo">
+    <h1> ITALIA </h1>
+
+    <p>Gelato, Cafe & More</p>
+    
+    <div class="language-buttons">
+        <a href="menu/arabic_language_menu_italia.pdf"> <button >Arabic</button></a>
+        <a href="menu/English_language_menu_italia.pdf"> <button >English</button></a>
+        <a href="menu/kurdish_language_menu_italia.pdf"> <button >Kurdish</button></a>
+    </div>
+
+    <div class="social-media-row">
+        <div  ><a href=""> <img class="social-media-icon facebook" src="images/facebook.png" alt=""></a>  </div>
+        <div > <a href=""> <img class="social-media-icon instagram" src="images/instagram.png" alt=""></a>  </div>
+        <div > <a href=""> <img class="social-media-icon snapchat" src="images/whatsapp.png" alt=""></a>  </div>
+        <div > <a href=""> <img class="social-media-icon tiktok" src="images/tiktok.png" alt=""> </a>  </div>
+        <div > <a href=""> <img class="social-media-icon snapchat" src="images/snapchat.png" alt=""> </a>  </div>
+
+    </div>
+
+    <footer>
+        &copy; 2024 ITALIA. All rights reserved.created by here's luck.
+    </footer>
+
+    <script>
+        // Simulate loading for demonstration
+        window.addEventListener('load', function() {
+            document.body.classList.remove('loading'); // Remove loading class when page is loaded
+        });
+
+       
+    </script>
+</body>
+</html>
